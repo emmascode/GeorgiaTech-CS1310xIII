@@ -1,53 +1,39 @@
-#We've written the function, sort_with_select, below. It takes
-#in one list parameter, a_list. Our version of selection sort
-#involves finding the minimum value and moving it to an
-#earlier spot in the list.
+#Recall in the lesson on sorts that we had you complete the
+#Bubble and Selection sort, and we showed you Merge sort.
+#We didn't show any of insertion sort, and I bet you can
+#guess why.
 #
-#However, some lines of code are blank. Complete these lines
-#to complete the selection_sort function. You should only need
-#to modify the section marked 'Write your code here!'
+#Implement insertion sort below.
+#
+#Name your function 'insertion'. insertion should take as
+#input a list, and return as output a sorted list. Note that
+#even though technically a sorting method does not have to
+#return the sorted list, yours should.
+#
+#If you're stuck on where to start, or having trouble
+#visualizing or understanding how exactly insertion sort
+#works, check out this website - https://visualgo.net/sorting
+#It provides a visual representation of all of the sorting
+#algorithms as well as pseudocode you can base your own code
+#off of.
 
-def sort_with_select(a_list):
-    
-    #For each index in the list...
-    for i in range(len(a_list)):
-        
-        #Assume first that current item is already correct...
-        minIndex = i
 
-        #For each index from i to the end...
-        for j in range(i + 1, len(a_list)):
-            
-            #Complete the reasoning of this conditional to
-            #complete the algorithm! Remember, the goal is
-            #to find the lowest item in the list between
-            #index i and the end of the list, and store its
-            #index in the variable minIndex.
-            #
-            #Write your code here!
-            if a_list[j] < a_list[minIndex]:
-                minIndex = j
-
-        #Save the current minimum value since we're about
-        #to delete it
-        minValue = a_list[minIndex]
+#Write your code here!
+def insertion(a_list):
+    for index in range(1, len(a_list)):
+        current = a_list[index]
+        position = index
         
-        #Delete the minimum value from its current index
-        del a_list[minIndex]
+        while position > 0 and a_list[position - 1] > current:
+            a_list[position] = a_list[position -1]
+            position = position - 1
+        a_list[position] = current
         
-        #Insert the minimum value at its new index
-        a_list.insert(i, minValue)
-    
-    #Return the resultant list
     return a_list
-	
 
-#Below are some lines of code that will test your function.
-#You can change the value of the variable(s) to test your
-#function with different inputs.
-#
-#If your function works correctly, this will originally
-#print: [1, 2, 3, 4, 5]
-print(sort_with_select([5, 3, 1, 2, 4]))
+
+#The code below will test your function. If your function
+#works, it will print: [1, 2, 3, 4, 5].
+print(insertion([5, 1, 3, 2, 4]))
 
 
