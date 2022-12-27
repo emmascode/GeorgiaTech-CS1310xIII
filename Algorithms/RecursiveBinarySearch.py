@@ -71,8 +71,5 @@ print("10/13/1885 is in datelist:", binary_search(datelist, date(1885, 10, 13)))
 print("11/28/2015 is in datelist:", binary_search(datelist, date(2015, 11, 28)))
 
 
-#Now, go see how it works with loops instead of recursion
-#in LoopingBinarySearch.py! Or, print how this works with
-#RecursiveBinarySearchwithPrints.py.
 
 
