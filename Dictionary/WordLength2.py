@@ -86,10 +86,6 @@ def length_words(sentence):
     
     return word_lengths
     
-    
-    
-    
-
 
 #Below are some lines of code that will test your function.
 #You can change the value of the variable(s) to test your

@@ -36,7 +36,6 @@ def text_deciphered(message, decoder_ring):
 
     message = ' '.join(message_list)
 
-
     return message
             
     

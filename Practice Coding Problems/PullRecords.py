@@ -30,8 +30,7 @@ def pull_records(file_name, my_list):
         res_list.append(file_list[i].strip('\n'))
     return res_list
   
-    
-
+  
 
 #Below are some lines of code that will test your function.
 #You can change the value of the variable(s) to test your

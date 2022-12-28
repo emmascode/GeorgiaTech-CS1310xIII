@@ -20,9 +20,6 @@ def most_oscars(my_dict):
             name = key
     return (name, max_oscar)
 
-
-
-
 #Below are some lines of code that will test your function.
 #You can change the value of the variable(s) to test your
 #function with different inputs.
